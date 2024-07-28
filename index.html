@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Maker</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Left side: Smoothie Machine Image -->
+            <div class="col-md-4 text-center">
+                <div class="machine">
+                    <img id="machineImage" src="mixer.png" alt="mixer" class="img-fluid mb-3">
+                    <p>🧃 Smoothie Machine</p>
+                </div>
+            </div>
+            <!-- Right side: Order Section -->
+            <div class="col-md-8">
+                <div class="order-section">
+                    <!-- Ingredients Section -->
+                    <div class="ingredients mb-3">
+                        <h2>Choose Your Ingredients</h2>
+                        <!-- Buttons for Ingredients Selection -->
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Banana" onchange="updateSelected()"> Banana
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Strawberry" onchange="updateSelected()"> Strawberry
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Blueberry" onchange="updateSelected()"> Blueberry
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Mango" onchange="updateSelected()"> Mango
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Apple" onchange="updateSelected()"> Apple
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Orange" onchange="updateSelected()"> Orange
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Pineapple" onchange="updateSelected()"> Pineapple
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Spinach" onchange="updateSelected()"> Spinach
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Kale" onchange="updateSelected()"> Kale
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Carrot" onchange="updateSelected()"> Carrot
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Milk" onchange="updateSelected()"> Milk
+                            </label>
+                            <label class="btn btn-primary m-1">
+                                <input type="checkbox" name="ingredient" value="Water" onchange="updateSelected()"> Water
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Selected Ingredients Section -->
+                    <div class="selected-ingredients">
+                        <h2>Selected Ingredients</h2>
+                        <ul id="selectedList" class="list-group"></ul>
+                    </div>
+                    <!-- Mix Button Section -->
+                    <div class="mix-button mt-3">
+                        <button type="button" class="btn btn-success btn-lg btn-block" onclick="mixSmoothie()">Mix Smoothie</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Order Summary Section -->
+        <div id="orderSummary" class="text-center mt-5"></div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
